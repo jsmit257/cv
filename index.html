@@ -26,6 +26,8 @@
       margin-right: auto;
     }
 
+    body>.header>.intro {}
+
     .qualifications {}
 
     .qualifications>div {
@@ -35,6 +37,8 @@
 
     .qualifications>div>ul {
       margin-top: 0;
+      list-style-type: circle;
+      padding-inline-start: .5em;
     }
 
     .qualifications>div>ul>li {
@@ -48,6 +52,7 @@
 
     .history>.section>.header {
       display: inline-block;
+      width: 100%;
     }
 
     .history>.section>.header>.title {
@@ -61,7 +66,9 @@
       float: left;
     }
 
-    .history>.section>.header>.daterange {}
+    .history>.section>.header>.daterange {
+      float: right;
+    }
 
     .history>.section>.header>.daterange>.begin {
       float: left;
@@ -80,12 +87,14 @@
       margin-top: 1em;
     }
 
-    .history>.section>.detail>.projects:before {
-      content: "Projects: "
+    .history>.section>.projects:before {
+      content: "Projects:";
+      text-decoration: underline;
     }
 
-    .history>.section>.detail>.pets:before {
-      content: "Personal contributions (pet projects)"
+    .history>.section>.pets:before {
+      content: "Personal contributions (pet projects):";
+      text-decoration: underline;
     }
 
     .history>.section>.detail>dl>dt {
@@ -112,7 +121,7 @@
       <a href="https://github.com/jsmit257/userservice">github</a><br />
       <a href="https://www.linkedin.com/in/jsmith0257">linkedin</a><br />
     </div>
-    <div class="detail section">
+    <div class="intro section">
       Full-stack developer with over 20 years professional experience. Database design and performance
       analysis with expertise in SQL92 compliant products. Proficient in Object Relational paradigms. Expert in
       Object Oriented and procedural languages, with and without strong typing and/or functional aspects.
@@ -170,6 +179,15 @@
       </ul>
     </div>
     <div>
+      Queue Services/Notifications:
+      <ul>
+        <li>Kafka</li>
+        <li>MQ</li>
+        <li>SNS</li>
+        <li>SQS</li>
+      </ul>
+    </div>
+    <div>
       CI/CD:
       <ul>
         <li>ArgoCD</li>
@@ -216,7 +234,7 @@
       </ul>
     </div>
     <div>
-      3rd Party Integrations:
+      3rd&nbsp;Party&nbsp;Integrations:
       <ul>
         <li>SiteMinder</li>
         <li>IdentityMinder</li>
@@ -235,10 +253,10 @@
     </div>
   </div>
   <div class="history">
-    <div class="section">
+    <div class="section twilio">
       <div class="header">
         <div class="title">
-          Software Engineer
+          Software Engineer (staff)
         </div>
         <div class="company">
           Twilio, Inc
@@ -252,13 +270,36 @@
           </div>
         </div>
       </div>
-      <div class="detail">
+      <div class="detail projects">
+        <dl>
+          <dt>Twilio Integration</dt>
+          <dd>Move toward SSO</dd>
+          <dt>Login Enhancements</dt>
+          <dd>MFA</dd>
+          <dt>AWS Migrations</dt>
+          <dd>Overwatch</dd>
+          <dt>K8S Migrations</dt>
+          <dd>quux</dd>
+          <dt>AM/RA</dt>
+          <dd>
+            After Twilio's acquisition of Sendgrid, continued development and maintenance for Account
+            Management and Revenue Assurance described in the next section on contract work at Sendgrid.
+          </dd>
+        </dl>
+      </div>
+      <div class="detail pets">
+        <dl>
+          <dt>Auditing</dt>
+          <dd>bar</dd>
+          <dt>Automation for Audits</dt>
+          <dd>foo</dd>
+        </dl>
       </div>
     </div>
-    <div class="section">
+    <div class="section sendgrid">
       <div class="header">
         <div class="title">
-          Contract Software Engineer
+          Software Engineer (contract)
         </div>
         <div class="company">
           Sendgrid, Inc.
@@ -272,10 +313,16 @@
           </div>
         </div>
       </div>
-      <div class="detail">
+      <div class="detail projects">
+        <dl>
+          <dt>Account Management</dt>
+          <dd>foo</dd>
+          <dt>Revenue Assurance (Billing)</dt>
+          <dd>bar</dd>
+        </dl>
       </div>
     </div>
-    <div class="section">
+    <div class="section charter">
       <div class="header">
         <div class="title">
           Network Engineer
@@ -291,8 +338,7 @@
           </div>
         </div>
       </div>
-      <div class="detail">
-        <div class="projects"></div>
+      <div class="detail projects">
         <dl>
           <dt>SpeedTest</dt>
           <dd>Supported and enhanced Speed Test infrastructure.</dd>
@@ -301,14 +347,15 @@
           <dt>Firmware Server</dt>
           <dd>Replaced existing server with nginx configured to throttle high volumes of downloads.</dd>
         </dl>
-        <div class="pets"></div>
+      </div>
+      <div class="detail pets">
         <dl>
           <dt>Local Development Environment</dt>
           <dd>Developed process for creating lab devices as local VMs for development.</dd>
         </dl>
       </div>
     </div>
-    <div class="section">
+    <div class="section staples">
       <div class="header">
         <div class="title">
           Application Architect
@@ -325,8 +372,7 @@
           </div>
         </div>
       </div>
-      <div class="detail">
-        <div class="projects"></div>
+      <div class="detail projects">
         <dl>
           <dt>Security (Login)</dt>
           <dd>
@@ -364,7 +410,8 @@
             services for analytics and content delivery.
           </dd>
         </dl>
-        <div class="pets"></div>
+      </div>
+      <div class="detail pets">
         <dl>
           <dt>gitflow</dt>
           <dd>
@@ -390,7 +437,7 @@
         </dl>
       </div>
     </div>
-    <div class="section">
+    <div class="section broadridge">
       <div class="header">
         <div class="title">
           Principal Software Eng.
@@ -407,8 +454,8 @@
           </div>
         </div>
       </div>
-      <div class="detail">
-        <div class="projects"></div>
+      <div class="detail projects">
+        <div class=""></div>
         <dl>
           <dt>Cognos Reporting</dt>
           <dd>Report design and deployment using Cognos industry-standard reporting tools.</dd>
@@ -417,7 +464,8 @@
           <dt>Jasper Reporting</dt>
           <dd>Developed and delivered core Jasper support library and custom bindings for financial reporting.</dd>
         </dl>
-        <div class="pets"></div>
+      </div>
+      <div class="pets">
         <dl>
           <dt>Database performance and tuning</dt>
           <dd>Developed POC for in-process Java procedures to replace T-SQL.</dd>
@@ -426,7 +474,7 @@
         </dl>
       </div>
     </div>
-    <div class="section">
+    <div class="section spigit">
       <div class="header">
         <div class="title">
           Principal Software Eng.
@@ -443,8 +491,7 @@
           </div>
         </div>
       </div>
-      <div class="detail">
-        <div class="projects"></div>
+      <div class="detail projects">
         <dl>
           <dt>BlaB! Chatroom implementation</dt>
           <dd>
@@ -454,7 +501,7 @@
           </dd>
       </div>
     </div>
-    <div class="section">
+    <div class="section innoprise">
       <div class="header">
         <div class="title">
           Principal Software Eng.
@@ -471,8 +518,7 @@
           </div>
         </div>
       </div>
-      <div class="detail">
-        <div class="projects"></div>
+      <div class="detail projects">
         <dl>
           <dt>Payroll</dt>
           <dd>
@@ -486,7 +532,7 @@
         </dl>
       </div>
     </div>
-    <div class="section">
+    <div class="section envysion">
       <div class="header">
         <div class="title">
           Principal Software Eng.
@@ -503,8 +549,7 @@
           </div>
         </div>
       </div>
-      <div class="detail">
-        <div class="projects"></div>
+      <div class="detail projects">
         <dl>
           <dt>POS/Security integration</dt>
           <dd>
@@ -514,7 +559,7 @@
         </dl>
       </div>
     </div>
-    <div class="section">
+    <div class="section swat">
       <div class="header">
         <div class="title">
           Principal Software Eng.
@@ -531,8 +576,7 @@
           </div>
         </div>
       </div>
-      <div class="detail">
-        <div class="projects"></div>
+      <div class="detail projects">
         <dl>
           <dt>Physical Security UI</dt>
           <dd>
@@ -547,7 +591,7 @@
           </dd>
       </div>
     </div>
-    <div class="section">
+    <div class="section dcc">
       <div class="header">
         <div class="title">
           Senior Developer
@@ -564,8 +608,7 @@
           </div>
         </div>
       </div>
-      <div class="detail">
-        <div class="projects"></div>
+      <div class="detail projects">
         <dl>
           <dt>Document Management</dt>
           <dd>
@@ -603,18 +646,19 @@
 
       </div>
     </div>
-    <div class="education section">
-      Education Metro State College Denver 2003-2005 Computer Science: continuing Education on Bachelors of
-      Science with a focus on programming.
-    </div>
-    <div class="other section">
-      Extra-curricular Experiments
-      Modular/diskless entertainment center suite of applications and standards
-      Preliminary work on network UI library in Web 2.0 using concepts from Glade, Java RMI, and Ajax
-      Hardware/software POC for appliance communications over high voltage lines
-      Virtualization
-      RaspberryPI 3
-    </div>
+  </div>
+  <div class="education section">
+    Education Metro State College Denver 2003-2005 Computer Science: continuing Education on Bachelors of
+    Science with a focus on programming.
+  </div>
+  <div class="other section">
+    Extra-curricular Experiments
+    Modular/diskless entertainment center suite of applications and standards
+    Preliminary work on network UI library in Web 2.0 using concepts from Glade, Java RMI, and Ajax
+    Hardware/software POC for appliance communications over high voltage lines
+    Virtualization
+    RaspberryPI 3
+  </div>
 </body>
 
 </html>
