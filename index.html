@@ -3,6 +3,17 @@
 <head>
   <title>Darrell Smith CV</title>
   <style>
+    @media print {
+      @page {
+        margin: 0;
+      }
+
+      body {
+        margin-bottom: 2em;
+        margin-top: 2em;
+      }
+    }
+
     body {
       margin-left: auto;
       margin-right: auto;
@@ -15,15 +26,13 @@
       border-bottom-style: solid;
       margin-bottom: 1em;
       padding-bottom: 1em;
-    }
 
-    .section.dcc,
-    .section.swat,
-    .section.envysion {
-      display: none;
+      &.dcc,
+      &.swat,
+      &.envysion {
+        display: none;
+      }
     }
-
-    body.header {}
 
     body>.header>.title {
       font-size: larger;
@@ -33,86 +42,84 @@
       margin-right: auto;
     }
 
-    body>.header>.intro {}
-
-    .qualifications {}
-
     .qualifications>div {
       clear: both;
       display: flex;
+
+      &>ul {
+        margin-top: 0;
+        list-style-type: circle;
+        padding-inline-start: .5em;
+
+        &>li {
+          float: left;
+          position: relative;
+          margin-left: 1em;
+          margin-right: 1em;
+        }
+      }
     }
 
-    .qualifications>div>ul {
-      margin-top: 0;
-      list-style-type: circle;
-      padding-inline-start: .5em;
-    }
+    .history>.section {
+      &>.header {
+        display: inline-block;
+        width: 100%;
 
-    .qualifications>div>ul>li {
-      float: left;
-      position: relative;
-      margin-left: 1em;
-      margin-right: 1em;
-    }
+        &>.title {
+          font-weight: bolder;
+          float: left;
+          margin-right: 1em;
+        }
 
-    .history {}
+        &>.company {
+          font-style: italic;
+          float: left;
+        }
 
-    .history>.section>.header {
-      display: inline-block;
-      width: 100%;
-    }
+        &>.daterange {
+          float: right;
 
-    .history>.section>.header>.title {
-      font-weight: bolder;
-      float: left;
-      margin-right: 1em;
-    }
+          &>.begin {
+            float: left;
 
-    .history>.section>.header>.company {
-      font-style: italic;
-      float: left;
-    }
+            &::after {
+              content: "to";
+            }
+          }
 
-    .history>.section>.header>.daterange {
-      float: right;
-    }
+          &>.end {
+            float: left;
+            margin-left: .333em;
+          }
+        }
+      }
 
-    .history>.section>.header>.daterange>.begin {
-      float: left;
-    }
+      &>.detail {
+        margin-top: 1em;
 
-    .history>.section>.header>.daterange>.begin:after {
-      content: "to";
-    }
+        &>dl {
+          &>dt {
+            float: left;
+            font-style: italic;
+            margin-right: 1em;
+          }
 
-    .history>.section>.header>.daterange>.end {
-      float: left;
-      margin-left: .333em;
-    }
+          &>dd {
+            margin-bottom: .6em;
+            margin-inline-start: 1em;
+          }
+        }
+      }
 
-    .history>.section>.detail {
-      margin-top: 1em;
-    }
+      &>.projects::before {
+        content: "Projects:";
+        text-decoration: underline;
+      }
 
-    .history>.section>.projects:before {
-      content: "Projects:";
-      text-decoration: underline;
-    }
-
-    .history>.section>.pets:before {
-      content: "Personal contributions (pet projects):";
-      text-decoration: underline;
-    }
-
-    .history>.section>.detail>dl>dt {
-      float: left;
-      font-style: italic;
-      margin-right: 1em;
-    }
-
-    .history>.section>.detail>dl>dd {
-      margin-bottom: .6em;
-      margin-inline-start: 1em;
+      &>.pets::before {
+        content: "Personal contributions (pet projects):";
+        text-decoration: underline;
+      }
     }
   </style>
 </head>
@@ -122,7 +129,7 @@
     <div class="title section">
       Jonathan Darrell Smith<br />
       816 Myrtle Ave<br />
-      Baron Rouge, LA 70802<br />
+      Baton Rouge, LA 70802<br />
       303.870.7665 | jsmit257@gmail.com<br />
       <a href="https://github.com/jsmit257/userservice">github</a><br />
       <a href="https://www.linkedin.com/in/jsmith0257">linkedin</a><br />
